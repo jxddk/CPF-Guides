@@ -1,11 +1,12 @@
-#CSS: Programmeringsprog til Website Style
+# CSS
 
 (inden du begynder på CSS, skal du nok lære at bruge HTML)
+## Værktøje
 
-##Hvad er CSS?
+## Kom i Gang
 
-##Kom i Gang
+## Oversigt
 
-##Projekter
+## Opgaver
 
-##Cheat Sheet
+## Cheat Sheet
