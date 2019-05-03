@@ -15,6 +15,8 @@ eller
 [Atom](https://atom.io/)
 er også rigtige gode.
 
+I din browser, kan du kigge på en websides HTML kode, ved at trykke Ctrl+U.
+
 ## Kom i Gang
 
 ### En Enkelt Prøveside
@@ -100,9 +102,9 @@ h3, osv., som er bare mindre udgaver af den samme.
 <h1>HeadingText</h1>
 ```
 
-#### \<hr> - Horisontal Line
+#### \<hr> - Horisontal Linje
 
-Bare en horisontal line på siden. Det behøver ikke have en lukkende tag.
+Bare en horisontal linje på siden. Det behøver ikke have en lukkende tag.
 
 ```html
 <hr>
@@ -110,7 +112,7 @@ Bare en horisontal line på siden. Det behøver ikke have en lukkende tag.
 
 #### \<br> - Break
 
-Ligesom `<hr>`, men bare en usynlig ny line i teksten.
+Ligesom `<hr>`, men bare en usynlig ny linje i teksten.
 
 ```html
 <br>
@@ -204,15 +206,86 @@ den. Eksemplen herunder er en button der siger "Click Me", og siger "Hej" når
 
 #### \<input> - Input
 
-#### \<table>, \<tr>, \<td> - Tables
+Hvis man skal få noget information fra brugeren på siden, skal man brug en 
+`input` tag. Man kan senere få informationen ud af `input` elementet med 
+Javascript. Man behøver ikke at bruge en lukkende tag med en input
+
+```html
+<input type="text" value="nothing here now"/>
+```
+
+Du kan specificere hvad for noget information det skal være, med `type` 
+attributten. Det kan være `text`, `number`, `password`, `checkbox`, 
+`password`, eller `file`.
+
+#### \<table>, \<tr>, \<td> - Tabeller
+
+Man kan organiser information i et tabel, som en nemt måde at bestem hvor 
+elementer skal være i forhold til hinanden. En tabel ser sådan ud:
+
+[link](http://google.com) | Welcome to My Website | [link](http://google.com)
+--- | --- | ---
+info | `more info` | *info*
+one | two | three
+
+Og man laver en sådan:
+
+```html
+<table>
+    <tr>
+        <td>Link</td>
+        <td>Welcome to My Website</td>
+        <td>Link</td>
+    </tr>
+    <tr>
+        <td>info</td>
+        <td>more info</td>
+        <td>info</td>
+    </tr>
+    <tr>
+        <td>one</td>
+        <td>two</td>
+        <td>three</td>
+    </tr>
+</table>
+```
+
+Man skal have en `<table>` element, der indholder flere `<tr>` ("table row") 
+elementer, som også indholder `<td>` ("table div") elementer. Det er nok 
+letter at forstå eksemplen, end at forstå en forklaring. Tabeller er rigtig 
+brugbar, når man skal hurtig og enkelt organiser layout på en side.
 
 #### \<i>, \<b>, \<u> - Tekst Stil
 
+Man kan få **bold** tekst med en `<b>` tag (f.eks `<p>Man kan få <b>bold</b> 
+tekst</p>`). Man kan gøre det sammen med *italic* tekst og `<i>`, og 
+underlinjet tekst og `<u>`.
+
 #### \<video> - Video
+
+`<video>` elementet fungere meget som en `<img>`:
+
+```html
+<video src="video.mp4"></video>
+```
 
 #### \<iframe> - Webside Frame
 
+En webside kan indholde et andet webside med en `<iframe>`:
+
+```html
+<iframe src="codingpirates.dk"></iframe>
+```
+
 #### \<blink>, \<marquee> - Sjov Tekst
+
+Man bruger dem ikke længer, men de er lidt sjove at leje med (bare prøve dem 
+og se):
+
+```html
+<blink>Blinky Blinky</blink>
+<marquee>YOU'RE WATCHING THE NEWS AT 11</marquee>
+```
 
 #### Flere Elementer
 
@@ -237,11 +310,11 @@ til elementet.
 ## Oversigt
 
 En HTML side består af elementer, der er defineret ved en tag. Elementer kan 
-have attributes, der beskriver dem. Elementer kan indholde hinanden. 
+have attributes, der beskriver dem. Elementer kan indholde hinanden.
 
 ## Opgaver
 
-Hvis du du øve dig, prøve lave en af de her opgaver. Du må gerne kopier tekst
+Hvis du vil øve dig, prøve lave en af de her opgaver. Du må gerne kopier tekst
  fra en eksemple, men prøve at skrive det selv, og ikke bare copy-paste.
  
 * En webside, der fortæller om dig.
@@ -250,6 +323,11 @@ Hvis du du øve dig, prøve lave en af de her opgaver. Du må gerne kopier tekst
 
 * En webside med nogle billeder, og en af dem linker til et andet side på 
 nettet.
+
+* En homepage til din programmeringcareer, hvor du kan tilføje links til alle
+ de projekter du kommer til at lave senere.
+
+* Din egen HTML cheat sheet webside
 
 Hvis du mangler inspiration til et større projekt, prøv en af de her:
 
@@ -260,7 +338,7 @@ Hvis du mangler inspiration til et større projekt, prøv en af de her:
 * Få inspiration fra *alle* websider du besøger! Prøv lave en kopi af en af dem
 
 * Søge efter nogle design inspiration, f.eks.
-[her](https://www.webdesign-inspiration.com/)
+[her](https://www.webdesign-inspiration.com/).
 
 ## Cheat Sheet
 
@@ -297,4 +375,23 @@ Elementer kan indholde andre elementer indenfor sine åbende og lukkende tags.
 Du kan kigge tilbage til Elementære Elementer og Andre Elementer for at se, 
 hvordan de bruges.
 
-### Eksemple Side med Nogle Elementer
+* \<!-- --> - Kommentar i teksten, som kun er synlig til udvikleren
+* \<a> - En link
+* \<b> - **Bold** tekst
+* \<body> - Primært indhold af din webside
+* \<br> - En ny linje i teksten
+* \<button> - En knappe
+* \<div> - En element der grupper andre elementer
+* \<h1> - Stor linje tekst
+* \<head> - Indholder elementer der giver information on siden selv, f.eks. `<title>`
+* \<hr> - En horisontal linje på siden
+* \<html> - Indholder hele siden
+* \<i> - *Italic* tekst
+* \<img> - En billede
+* \<input> - Tager input fra brugeren
+* \<p> - En tekstparagraf
+* \<table>, \<tr>, \<td> - Definere en tabel, rækker, og kolonner
+* \<title> - Definere titlen til siden
+* \<u> - Underlinjet tekst
+* \<ul>, \<ol>, \<li> - Elementer til ordered, unordered lists, og list items
+* \<video> - En video

@@ -139,14 +139,62 @@ Inden du fortsætter, skal du kunne:
 
 Nu vil du nok kunne få den webside op på nettet, uden at skulle ved alting om
 Python. Første, skal du
-[download Python 3](https://www.python.org/downloads/).
+[download Python 3](https://www.python.org/downloads/). Så åbner du en 
+terminalvindue (Windows: Win+R, skriv 'cmd' | Mac: Cmd+Space, skriv 
+'terminal' | Linux: Du ved det allerede). Skriv `python -m pip install flask`
+ for at installere Flask library til Python.
+
+Lav en nu mappe til din projekt, der indholder alle dine websider som du vil 
+brug på din webserver. Navngive din primært HTML fil `index.html`.
+
+Lav en nu fil, der hedder `flask_quickstart.py`. Det skal indholde:
+
+```python
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+   return render_template('index.html')
+
+app.run(host='0.0.0.0', port=8080)
+```
+
+Køre denne Python script du lige har lavet. Så længe scriptet køre, så køre 
+din side også! Ændre på din WiFi netværk ved at besøg din IP addresse i 
+browseren.
+
+For at finde din IP addresse, skal du skriv i terminal:
+
+```
+Windows:
+ipconfig
+
+Mac:
+ifconfig
+
+Linux:
+ifconfig
+```
+
+Så leder du efter noget der ligner `192.168.1.XXXX`. Det er din lokale IP 
+addresse. I browseren, besøg `192.168.1.XXXX:8080`, og så burde du at kunne 
+se din webside (det burde andre kunne også gøre).
 
 Hvis noget ikke fungere, skal du bare spørge en pirat kaptajn, eller bruge 
 Google!
 
 ## Kom i Gang: CSS
 
+Man bruger CSS til at give stil til en HTML side. Læse CSS.md, og prøv en af 
+opgaverne. Hvis du vil komme i gang med programmering, kan du sprænge CSS 
+over, og start med Javascript.
+
+Du må have lært HTML, inden du kan brug CSS til noget!
+
 ## Kom i Gang: Javascript
+
+
 
 ## Kom i Gang: Python
 
